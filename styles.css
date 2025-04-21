@@ -1,0 +1,115 @@
+:root {
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --gray-light: #f3f4f6;
+    --gray: #d1d5db;
+    --gray-dark: #6b7280;
+    --text: #111827;
+    --completed: #9ca3af;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--gray-light);
+    color: var(--text);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border: 1px solid var(--gray);
+    border-radius: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+button {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: var(--primary-hover);
+}
+
+ul {
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--gray-light);
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+}
+
+li.completed span {
+    text-decoration: line-through;
+    color: var(--completed);
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.filters button {
+    background: var(--gray);
+    color: var(--text);
+}
+
+.filters button:hover {
+    background: var(--gray-dark);
+    color: #fff;
+}
+
+li button {
+    margin-left: 0.5rem;
+    background: #ef4444;
+}
+
+li button[data-cy="complete-button"] {
+    background: #10b981;
+}
+
+li button:hover {
+    opacity: 0.9;
+}
